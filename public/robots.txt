@@ -1,0 +1,5 @@
+# Simplydatatechs
+User-agent: *
+Allow: /
+
+Sitemap: https://www.simplydatatechs.com/sitemap.xml

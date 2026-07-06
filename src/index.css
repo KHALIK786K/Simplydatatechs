@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-800 font-sans antialiased;
+}
+
+/* Reusable composed utilities */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white shadow-glow hover:bg-brand-700 hover:-translate-y-0.5 focus-visible:ring-brand-500;
+  }
+  .btn-accent {
+    @apply bg-accent-500 text-slate-900 shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 focus-visible:ring-accent-500;
+  }
+  .btn-outline {
+    @apply border border-slate-300 bg-white/70 text-slate-700 backdrop-blur hover:border-brand-400 hover:text-brand-700 focus-visible:ring-brand-500;
+  }
+  .btn-ghost-light {
+    @apply border border-white/30 bg-white/10 text-white backdrop-blur hover:border-white/60 hover:bg-white/20 focus-visible:ring-white;
+  }
+  .section-title {
+    @apply text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-600;
+  }
+  /* Glassmorphism card */
+  .glass {
+    @apply border border-white/20 bg-white/10 backdrop-blur-xl;
+  }
+  .glass-light {
+    @apply border border-white/60 bg-white/70 backdrop-blur-xl;
+  }
+  /* Animated gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-500 via-violet-500 to-cyber-500 bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradient-x 8s ease infinite;
+  }
+  .gradient-border {
+    position: relative;
+    background-clip: padding-box;
+  }
+}
+
+@layer utilities {
+  .perspective {
+    perspective: 1200px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .bg-animated {
+    background-size: 200% 200%;
+    animation: gradient-x 12s ease infinite;
+  }
+  /* Shimmer skeleton */
+  .skeleton {
+    @apply relative overflow-hidden bg-slate-200/70;
+  }
+  .skeleton::after {
+    content: "";
+    @apply absolute inset-0 -translate-x-full;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent
+    );
+    animation: shimmer 1.6s infinite;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

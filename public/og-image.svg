@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#18268c"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#g)" opacity="0.35"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f52f5"/>
+      <stop offset="1" stop-color="#18268c"/>
+    </linearGradient>
+  </defs>
+  <path d="M110 300l60-75 60 75z" fill="#ffb454"/>
+  <circle cx="170" cy="316" r="16" fill="#fff"/>
+  <text x="110" y="420" font-family="Inter, sans-serif" font-size="72" font-weight="800" fill="#ffffff">Simplydatatechs</text>
+  <text x="112" y="480" font-family="Inter, sans-serif" font-size="34" font-weight="500" fill="#bccfff">Online Programs to Advance Your Career</text>
+</svg>
