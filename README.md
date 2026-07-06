@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Simplydatatechs — Premium Course Landing Website
 
 A modern, premium SaaS-style marketing site built with **React 19, Vite,
@@ -98,3 +99,6 @@ served as WebP for performance.
   function bodies for real `apiClient` calls when a backend exists — consuming
   components won't change.
 - Form + newsletter submissions are simulated (logged to console).
+=======
+# Simplydatatechs
+>>>>>>> b9e571b82925ba2c300cf4f03e30e23f147336ab
