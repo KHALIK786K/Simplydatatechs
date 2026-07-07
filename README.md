@@ -1,15 +1,15 @@
-<<<<<<< HEAD
-# Simplydatatechs — Premium Course Landing Website
+# Simplydatatechs — Premium Course Platform
 
 A modern, premium SaaS-style marketing site built with **React 19, Vite,
 TypeScript, Tailwind CSS, React Router, Axios, and Framer Motion**. Features
-3D tilt cards, animated gradients, glassmorphism, scroll/reveal animations,
-mouse-parallax, and lazy-loaded imagery.
+a custom neural-node logo, 3D tilt cards, mouse-parallax, animated gradients,
+glassmorphism, scroll/reveal animations, lazy-loaded photography, and a rich
+section library.
 
 ## Tech stack
 
 - React 19 + TypeScript
-- Vite 6 (dev server + build)
+- Vite 6 (dev server + production build with code splitting)
 - Tailwind CSS 3 (custom design tokens)
 - React Router 7
 - Axios (API client)
@@ -25,80 +25,69 @@ npm run build    # type-check + production build to /dist
 npm run preview  # preview the production build
 ```
 
-## What's included
+## Logo system
 
-**Home page sections:** animated hero (mouse-parallax 3D glass cards) · trusted-by
-marquee · animated stat counters · interactive service cards (3D tilt) · about
-section (3D image + feature list) · process/how-it-works · featured courses ·
-image gallery · company timeline · pricing tiers · glass testimonials · FAQ
-accordion · newsletter · image-backed CTA.
+Custom neural-node logo representing AI, data connectivity, and cloud:
+- **Favicon**: `public/favicon.svg` (square icon)
+- **OG Image**: `public/og-image.svg` (social sharing)
+- **Components**: `Logo` (horizontal), `LogoIcon` (square), `LogoMark` (raw SVG)
+- Animated hover (spring rotation) via Framer Motion
 
-**Pages / routes**
+## Home page sections (17 total)
+
+1. **Hero** — animated gradient, mouse-parallax 3D glass cards, real photos, animated counters
+2. **LogoCloud** — infinite marquee of partner wordmarks
+3. **Stats** — animated counter row with gradient text
+4. **Services** — 6 interactive tilt cards with images, stats, and hover reveals
+5. **About** — dual images, feature list, mini stats row
+6. **Process** — 4-step journey with image panel
+7. **Featured Courses** — top courses grid
+8. **TechStack** — categorized tools on dark background
+9. **Gallery** — masonry-style image grid with hover overlays
+10. **Team** — 6 member tilt cards with bios
+11. **Timeline** — alternating milestones with icons and inline counters
+12. **Achievements** — 6 big stat counters + 4 award cards
+13. **Pricing** — 3 tiers with highlighted "most popular"
+14. **Testimonials** — glass cards with photos, star ratings, quotes
+15. **FAQ** — animated accordion (8 questions)
+16. **Newsletter** — email capture with validation and success state
+17. **CTA** — image-backed call to action
+
+## Pages / routes
 
 | Path              | Page              |
 | ----------------- | ----------------- |
-| `/`               | Home              |
-| `/courses`        | Course catalogue (filter + search) |
-| `/courses/:slug`  | Course detail (syllabus + enquiry form) |
-| `/contact`        | Contact / enquiry |
-| `*`               | 404 Not Found     |
+| `/`               | Home (17 sections)|
+| `/courses`        | Course catalogue (hero, filter, search, image strip) |
+| `/courses/:slug`  | Course detail (hero, highlights, curriculum, stats, sidebar form) |
+| `/contact`        | Contact (hero, cards, image, mini stats, enquiry form) |
+| `*`               | 404 (animated logo, gradient text, dark background) |
 
 ## Premium UI toolkit (`src/components/ui`)
 
-`Reveal` (scroll reveal) · `TiltCard` (pointer-driven 3D tilt) ·
-`AnimatedCounter` · `GlowBackground` · `Marquee` · `LazyImage` (skeleton +
-fade-in) · `PageLoader` · `ScrollProgress` · `Icon` (inline SVG set) ·
-`SectionHeading` · plus `Button`, `Card`, `Container`, `Section`, `Spinner`.
-
-## Project structure
-
-```
-src/
-  api/            # axios client, mock API, placeholder catalogue data
-  components/
-    layout/       # Navbar, Footer, Logo, Layout (loader + scroll progress)
-    sections/     # Hero, Services, About, Process, Gallery, Timeline,
-                  # Pricing, Testimonials, FAQ, Newsletter, CTA, Stats,
-                  # LogoCloud, FeaturedCourses, CourseCard/Grid, LeadForm
-    ui/           # reusable premium primitives (see above)
-  config/         # site.ts (branding) · images.ts (photo sources)
-  hooks/          # useCourses, useAsync
-  pages/          # Home, Courses, CourseDetail, Contact, NotFound
-  types/ utils/   # shared types + helpers
-public/           # favicon, og-image, robots.txt, sitemap.xml
-```
-
-## Branding
-
-All brand strings live in **`src/config/site.ts`** and **`index.html`**.
-Update those to rebrand across the whole app.
+`Reveal` · `TiltCard` · `AnimatedCounter` · `GlowBackground` · `Marquee` ·
+`LazyImage` · `PageLoader` · `ScrollProgress` · `Icon` (18 inline SVG icons) ·
+`SectionHeading` · `Button` · `Card` · `Container` · `Section` · `Spinner`
 
 ## Images & licensing
 
-Photographic images are referenced from the **Unsplash CDN** (see
-`src/config/images.ts`) and are used under the [Unsplash License](https://unsplash.com/license)
-(free for commercial/non-commercial use, no attribution required). They are
-loaded with `loading="lazy"`, `decoding="async"`, sized via URL params, and
-served as WebP for performance.
-
-> To fully self-host (recommended for production/offline builds), download each
-> image into `public/media/` and repoint the constants in `images.ts` at the
-> local paths. All icons, illustrations, gradients, and decorative visuals are
-> original (inline SVG / CSS) and require no third-party licensing.
+32 photographic images referenced from the **Unsplash CDN** (`src/config/images.ts`)
+under the [Unsplash License](https://unsplash.com/license). All served as WebP
+with lazy loading and skeleton fade-in. To self-host, download into `public/media/`
+and repoint the constants. All icons, logo, illustrations, and decorative visuals
+are original inline SVG/CSS.
 
 ## Performance & accessibility
 
-- Native lazy loading + async decoding on images; WebP format; skeletons to
-  avoid layout shift.
-- `prefers-reduced-motion` respected globally (animations disabled).
-- Semantic landmarks, focus-visible rings, `aria-*` on interactive controls.
+- Code splitting (vendor, motion, app chunks)
+- Native lazy loading + async decoding on images
+- WebP format via Unsplash CDN params
+- Skeleton shimmer for layout stability
+- `prefers-reduced-motion` respected globally
+- Semantic landmarks, focus-visible rings, `aria-*` attributes
+- Scroll progress bar and page loader
 
-## Notes & limitations
+## Branding
 
-- Course/testimonial/FAQ data is mock/placeholder (`src/api/`). Swap the mock
-  function bodies for real `apiClient` calls when a backend exists — consuming
-  components won't change.
-- Form + newsletter submissions are simulated (logged to console).
-=======
-# Simplydatatechs
->>>>>>> b9e571b82925ba2c300cf4f03e30e23f147336ab
+All brand strings in `src/config/site.ts` and `index.html`. Update those two
+locations to rebrand the entire app.

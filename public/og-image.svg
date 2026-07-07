@@ -1,14 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#18268c"/>
-  <rect x="0" y="0" width="1200" height="630" fill="url(#g)" opacity="0.35"/>
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2f52f5"/>
-      <stop offset="1" stop-color="#18268c"/>
+    <linearGradient id="ogbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1445"/>
+      <stop offset=".5" stop-color="#18268c"/>
+      <stop offset="1" stop-color="#7c3aed"/>
     </linearGradient>
   </defs>
-  <path d="M110 300l60-75 60 75z" fill="#ffb454"/>
-  <circle cx="170" cy="316" r="16" fill="#fff"/>
-  <text x="110" y="420" font-family="Inter, sans-serif" font-size="72" font-weight="800" fill="#ffffff">Simplydatatechs</text>
-  <text x="112" y="480" font-family="Inter, sans-serif" font-size="34" font-weight="500" fill="#bccfff">Online Programs to Advance Your Career</text>
+  <rect width="1200" height="630" fill="url(#ogbg)"/>
+  <!-- Grid pattern -->
+  <g opacity=".06" stroke="#fff" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="630"/><line x1="60" y1="0" x2="60" y2="630"/>
+    <line x1="120" y1="0" x2="120" y2="630"/><line x1="180" y1="0" x2="180" y2="630"/>
+    <line x1="0" y1="0" x2="1200" y2="0"/><line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+  </g>
+  <!-- Logo mark -->
+  <g transform="translate(90,220)">
+    <rect width="80" height="80" rx="20" fill="#2f52f5"/>
+    <circle cx="40" cy="22" r="6" fill="#fff" opacity=".95"/>
+    <circle cx="22" cy="54" r="6" fill="#22d3ee" opacity=".9"/>
+    <circle cx="58" cy="54" r="6" fill="#ffb454" opacity=".9"/>
+    <line x1="40" y1="28" x2="22" y2="48" stroke="#fff" stroke-width="2.5" opacity=".5"/>
+    <line x1="40" y1="28" x2="58" y2="48" stroke="#fff" stroke-width="2.5" opacity=".5"/>
+    <line x1="28" y1="54" x2="52" y2="54" stroke="#fff" stroke-width="2.5" opacity=".5"/>
+    <circle cx="40" cy="42" r="4" fill="#fff" opacity=".7"/>
+  </g>
+  <text x="200" y="275" font-family="Inter,system-ui,sans-serif" font-size="62" font-weight="800" fill="#fff">Simplydatatechs</text>
+  <text x="92" y="350" font-family="Inter,system-ui,sans-serif" font-size="28" font-weight="400" fill="#bccfff">Online Programs to Advance Your Career in AI, Cloud &amp; Data</text>
+  <!-- Decorative blobs -->
+  <circle cx="1050" cy="150" r="180" fill="#2f52f5" opacity=".15"/>
+  <circle cx="1100" cy="500" r="140" fill="#7c3aed" opacity=".12"/>
+  <circle cx="900" cy="350" r="100" fill="#22d3ee" opacity=".1"/>
 </svg>

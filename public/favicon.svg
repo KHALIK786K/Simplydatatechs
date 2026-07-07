@@ -1,5 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#1a37db"/>
-  <path d="M8 20l8-10 8 10z" fill="#ffb454"/>
-  <circle cx="16" cy="22" r="2.4" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f52f5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#fg)"/>
+  <!-- Neural node cluster: 3 nodes + connections = AI/data/cloud -->
+  <circle cx="32" cy="18" r="5" fill="#fff" opacity=".95"/>
+  <circle cx="18" cy="42" r="5" fill="#22d3ee" opacity=".9"/>
+  <circle cx="46" cy="42" r="5" fill="#ffb454" opacity=".9"/>
+  <!-- Connection lines -->
+  <line x1="32" y1="23" x2="18" y2="37" stroke="#fff" stroke-width="2" opacity=".5"/>
+  <line x1="32" y1="23" x2="46" y2="37" stroke="#fff" stroke-width="2" opacity=".5"/>
+  <line x1="23" y1="42" x2="41" y2="42" stroke="#fff" stroke-width="2" opacity=".5"/>
+  <!-- Center glow dot -->
+  <circle cx="32" cy="34" r="3" fill="#fff" opacity=".7"/>
+  <line x1="32" y1="23" x2="32" y2="31" stroke="#fff" stroke-width="1.5" opacity=".4"/>
+  <line x1="21" y1="40" x2="29" y2="35" stroke="#fff" stroke-width="1.5" opacity=".4"/>
+  <line x1="43" y1="40" x2="35" y2="35" stroke="#fff" stroke-width="1.5" opacity=".4"/>
 </svg>
